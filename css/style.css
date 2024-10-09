@@ -1,0 +1,12 @@
+.so-icons_borders {
+    border: 1px solid grey;
+    border-radius: 30%; 
+    padding: 0.2rem;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    color: grey;
+}
+
+.so-icons_borders:hover{
+    background-color: lightgray;
+}
