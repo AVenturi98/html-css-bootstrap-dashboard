@@ -44,63 +44,73 @@
         <div class="row mt-4">
             <div class="col">
                 <h5>Nome Autore</h5>
-                <input type="text" class="form-control" name="First_Name" placeholder="Inserisci il nome dell'autore" id="First name" minlength="5" required >
+                <input type="text" class="form-control" name="First_Name" placeholder="Inserisci il nome dell'autore" id="First name" minlength="5">
                 <label for="First name"></label>
             </div>
             <div class="col">
                 <h5>Cognome Autore</h5>
-              <input type="text" class="form-control" name="Last_Name" placeholder="Inserisci il cognome dell'autore" id="Last name" minlength="3">
-              <label for="Last name"></label>
+                <input type="text" class="form-control" name="Last_Name" placeholder="Inserisci il cognome dell'autore" id="Last name" minlength="3">
+                <label for="Last name"></label>
             </div>
-          </div>
-          <h5>Titolo Libro</h5>
-          <input type="text" class="form-control" name="Title_Book" placeholder="Inserisci il titolo del libro" id="Title book" minlength="3" required>
-          <label for="Title book"></label>
+        </div>
 
-          <div class="container p-0">
-            <div class="row">
-                <div class="col-4">
+        <h5>Titolo Libro</h5>
+        <input type="text" class="form-control" list="Title_Book" name="Title_Book" placeholder="Inserisci il titolo del libro" id="Title book" minlength="3" required autofocus>
+        <label for="Title book" aria-label="hidden"></label>
+        <datalist id="Title_Book">
+            <option value="Shardana">
+            <option value="Dylan Dog">
+            <option value="Il Signore degli Anelli">
+          </datalist>
+
+        <div class="container p-0" >
+            <div class="row gy-3">
+                <div class="col-md-4 col-sm-12">
                     <h5>Genere</h5>
                     <select class="form-select" id="genere" required>
                         <label for="genere"></label>
-                      <option>Scegli il genere</option>
+                      <option selected disabled value="">Scegli il genere</option>
                       <option value="1">Fantasy</option>
                       <option value="2">Horror</option>
                       <option value="3">Sci-fi</option>
                       <option value="4">Crime</option>
                       <option value="5">Biografia</option>
                     </select>
-                  </div>
-                  <div class="col-4">
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
                     <h5>Anno di Pubblicazione</h5>
-                    <input type="text" class="form-control" name="a.p. libro" placeholder="Inserisci l'anno" id="Anno pubblicazione">
+                    <input type="date" class="form-control" name="a.p. libro" placeholder="Inserisci l'anno" id="Anno pubblicazione">
                     <label for="Anno pubblicazione"></label>
                   </div>
-                  <div class="col-4">
+                <div class="col-md-4 col-sm-12">
                     <h5>ISBN#</h5>
-                    <input type="text" class="form-control" name="a.p. libro" placeholder="Inserisci l'anno" id="Anno pubblicazione">
+                    <input type="text" class="form-control" name="a.p. libro" placeholder="Inserisci l'anno" id="Anno pubblicazione" minlength="3" maxlength="9">
                     <label for="Anno pubblicazione"></label>
-                  </div>
+                </div>
             </div>
-          </div>
-          <hr>
-          <div>
+        </div>
+        <hr>
+        <div>
             <h5>Note</h5>
             <input type="text-area" class="form-control" placeholder="Inserisci eventuali note sul libro" name="Notes" id="Notes">
             <label for="Notes"></label>
-          </div>
+        </div>
 
-          <div class="form-check mt-3">
-            <input class="form-check-input" type="checkbox" value="DigitalEdition" name="Digital Edition" id="flexCheckChecked">
+        <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" value="DigitalEdition" name="Digital Edition" id="flexCheckChecked" disabled>
             <label class="form-check-label" for="flexCheckChecked">
               Disponibile anche in versione digitale
             </label>
-          </div>
-          <br>
-          <button type="submit" value="submit" class="btn bg-primary text-white">Aggiungi Libro</button>
+        </div>
+        <br>
+        <button type="reset" class="btn bg-danger text-white">Reset</button>
+        <button type="submit" value="submit" class="btn bg-primary text-white">Aggiungi Libro</button>
+        <button type="submit" class="btn bg-secondary text-white" onclick="alert('Non disponibile al momento')">Esplora Digital</button>
 
-
-        </form>
+    </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
